@@ -80,12 +80,12 @@ if uploaded_files:
             buffer = BytesIO()
             if conversion_type == "CSV":
                 df.to.csv(buffer, index=False)
-                file_name = file.name.replace(file.ext, ".csv")
+                file_name = file.name.replace(file_ext, ".csv")
                 mime_type = "text/csv"
 
             elif conversion_type == "Excel":
                 df.to_excel(buffer, index=False)
-                file_name = file.name.replace(file.ext, ".xlsx")
+                file_name = file.name.replace(file_ext, ".xlsx")
                 mime_type = "application/vnd.openxmlformats-officedocument.spreadsheethtml.sheet"
             buffer.seek(0)
 
