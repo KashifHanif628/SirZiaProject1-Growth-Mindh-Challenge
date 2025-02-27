@@ -79,7 +79,7 @@ if uploaded_files:
         if st.button(f"Convert{file.name}"):
             buffer = BytesIO()
             if conversion_type == "CSV":
-                df.to.csv(buffer, index=False)
+                df.to_csv(buffer, index=False)
                 file_name = file.name.replace(file_ext, ".csv")
                 mime_type = "text/csv"
 
